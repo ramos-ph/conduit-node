@@ -1,0 +1,16 @@
+{
+  "name": "conduit-node",
+  "version": "0.1.0",
+  "description": "",
+  "license": "MIT",
+  "author": "Pedro Ramos <pedroramos.contato@outlook.com.br>",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "dependencies": {
+    "fastify": "^4.26.1"
+  },
+  "devDependencies": {
+    "prettier": "^3.2.5"
+  }
+}
