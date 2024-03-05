@@ -2,6 +2,10 @@
 
 An implementation of [Real World](https://realworld-docs.netlify.app/docs/intro/).
 
+## Built with
+
+- Node.js (v20.11.1)
+
 ## Installing
 
 ```
