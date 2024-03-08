@@ -1,3 +1,4 @@
+const crypto = require("crypto");
 const jwt = require("jsonwebtoken");
 
 const { Profile } = require("../models/profile");
@@ -6,8 +7,9 @@ module.exports = {
   async create(request, reply) {
     const { username, email, password } = request.body.user;
 
-    // temporarily encoding it as base64
-    const passwordHash = Buffer.from(password).toString("base64");
+    const passwordHash = crypto
+      .pbkdf2Sync(password, process.env.SALT, 100_000, 64, "sha512")
+      .toString("hex");
 
     const user = await Profile.create({ username, email, passwordHash });
 
