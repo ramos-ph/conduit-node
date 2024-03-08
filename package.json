@@ -8,6 +8,7 @@
     "start": "node src/server.js"
   },
   "dependencies": {
+    "dotenv": "^16.4.5",
     "fastify": "^4.26.1",
     "jsonwebtoken": "^9.0.2",
     "sequelize": "^6.37.1",
