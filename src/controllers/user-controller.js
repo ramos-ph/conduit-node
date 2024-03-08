@@ -1,3 +1,5 @@
+const jwt = require("jsonwebtoken");
+
 const { Profile } = require("../models/profile");
 
 module.exports = {
@@ -17,7 +19,7 @@ module.exports = {
         email: user.email,
         bio: user.bio,
         image: user.image,
-        token: null,
+        token: jwt.sign({ sub: user.id }, process.env.ACCESS_TOKEN_SECRET),
       },
     };
   },
