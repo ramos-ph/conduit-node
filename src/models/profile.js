@@ -5,7 +5,11 @@ class Profile extends Model {}
 
 Profile.init(
   {
-    id: { type: DataTypes.UUID, defaultValue: DataTypes.UUIDV4 },
+    id: {
+      type: DataTypes.UUID,
+      defaultValue: DataTypes.UUIDV4,
+      primaryKey: true,
+    },
     username: { type: DataTypes.STRING, allowNull: false },
     email: { type: DataTypes.STRING, allowNull: false },
     passwordHash: { type: DataTypes.STRING, allowNull: false },
