@@ -9,8 +9,8 @@ Profile.init(
     username: { type: DataTypes.STRING, allowNull: false },
     email: { type: DataTypes.STRING, allowNull: false },
     passwordHash: { type: DataTypes.STRING, allowNull: false },
-    bio: { type: DataTypes.STRING },
-    image: { type: DataTypes.STRING },
+    bio: { type: DataTypes.STRING, defaultValue: null },
+    image: { type: DataTypes.STRING, defaultValue: null },
   },
   { sequelize },
 );
