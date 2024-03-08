@@ -15,8 +15,6 @@
     "sqlite3": "^5.1.7"
   },
   "devDependencies": {
-    "chai": "^5.1.0",
-    "mocha": "^10.3.0",
     "prettier": "^3.2.5"
   }
 }
