@@ -9,6 +9,7 @@ An implementation of [Real World](https://realworld-docs.netlify.app/docs/intro/
 ## Installing
 
 ```
+$ cp .env.example .env
 $ npm install
 ```
 
