@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const fastify = require("fastify");
 const userController = require("./controllers/user-controller");
 
