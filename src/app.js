@@ -1,7 +1,8 @@
-require("dotenv").config();
+import dotenv from "dotenv";
+dotenv.config();
 
-const fastify = require("fastify");
-const userController = require("./controllers/user-controller");
+import fastify from "fastify";
+import { createUser, loginUser } from "./controllers/user-controller.js";
 
 const makeApp = (options = {}) => {
   const app = fastify(options);
@@ -13,16 +14,16 @@ const makeApp = (options = {}) => {
   app.route({
     method: "POST",
     url: "/api/users",
-    handler: userController.create,
+    handler: createUser,
   });
 
   app.route({
     method: "POST",
     url: "/api/users/login",
-    handler: userController.login,
+    handler: loginUser,
   });
 
   return app;
 };
 
-module.exports = makeApp;
+export { makeApp };

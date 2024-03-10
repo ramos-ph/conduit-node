@@ -1,5 +1,5 @@
-const { DataTypes, Model } = require("sequelize");
-const sequelize = require("../database/sequelize");
+import { DataTypes, Model } from "sequelize";
+import { sequelize } from "../database/sequelize.js";
 
 class Profile extends Model {}
 
@@ -19,4 +19,4 @@ Profile.init(
   { sequelize },
 );
 
-module.exports = { Profile };
+export { Profile };

@@ -1,8 +1,8 @@
-const sequelize = require("./database/sequelize");
-
-const server = require("./app")({ logger: true });
+import { sequelize } from "./database/sequelize.js";
+import { makeApp } from "./app.js";
 
 const start = async () => {
+  const server = makeApp({ logger: true });
   try {
     await sequelize.authenticate();
     await server.listen({ port: 3000 });

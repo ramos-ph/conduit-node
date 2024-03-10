@@ -4,6 +4,7 @@
   "description": "",
   "license": "MIT",
   "author": "Pedro Ramos <pedroramos.contato@outlook.com.br>",
+  "type": "module",
   "scripts": {
     "start": "node src/server.js"
   },
