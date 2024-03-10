@@ -16,6 +16,12 @@ const makeApp = (options = {}) => {
     handler: userController.create,
   });
 
+  app.route({
+    method: "POST",
+    url: "/api/users/login",
+    handler: userController.login,
+  });
+
   return app;
 };
 
